@@ -24,9 +24,7 @@ RCT_EXPORT_VIEW_PROPERTY(device, NSString);
 - (UIView *)view
 {
     // Alloc UI element
-    if (_recorderView == nil) {
-        _recorderView = [[RNRecorder alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
-    }
+    _recorderView = [[RNRecorder alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
     return _recorderView;
 }
 
